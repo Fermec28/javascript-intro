@@ -9,6 +9,10 @@ var Flower = function(name,color){
   this.color= color
 }
 
+Flower.prototype.identify= function(){
+  return "I am an "+this.name+" and I am "+this.color+"." 
+}
+
 //------------------------------------------------------------------------------------------------------------------
 // PRUEBAS: **NO** Cambies nada debajo de esta linea. Tu trabajo es implementar el codigo arriba para hacer que estas pruebas pasen.
 //------------------------------------------------------------------------------------------------------------------
@@ -29,7 +33,7 @@ var flowers = [
   new Flower("Narcissus", "white"),
   new Flower("Chrysanthemum", "yellow"),
 ];
-garden.plant(flowers){
+garden.plant= function(flowers){
   this.flowers=flowers
 }
 garden.name = "Kula Botanical Garden"
@@ -37,13 +41,14 @@ garden.name = "Kula Botanical Garden"
 garden.plant(flowers);
 garden.location = "Makawao"
 garden.selectByColor = function(color){
-  this.flowers.filter(function(element){
+
+  return this.flowers.filter(function(element){
     return (element.color === color)
   })
 }
 
 garden.selectByName= function(name){
-  this.flowers.filter(function(element){
+  return this.flowers.filter(function(element){
     return (element.name === name)
   })
 }
