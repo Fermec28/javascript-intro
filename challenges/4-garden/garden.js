@@ -5,6 +5,7 @@
 //------------------------------------------------------------------------------------------------------------------
 garden={}
 
+
 var Flower = function(name,color){
   this.name = name
   this.color= color
@@ -21,6 +22,7 @@ garden.selectByColor = function(color){
     this.flowers.filter(function(element){
     return (color === element.color)
   })  
+
 }
 
 //------------------------------------------------------------------------------------------------------------------
@@ -47,8 +49,25 @@ var flowers = [
   new Flower("Narcissus", "white"),
   new Flower("Chrysanthemum", "yellow"),
 ];
+garden.plant= function(flowers){
+  this.flowers=flowers
+}
+garden.name = "Kula Botanical Garden"
 
 garden.plant(flowers);
+garden.location = "Makawao"
+garden.selectByColor = function(color){
+
+  return this.flowers.filter(function(element){
+    return (element.color === color)
+  })
+}
+
+garden.selectByName= function(name){
+  return this.flowers.filter(function(element){
+    return (element.name === name)
+  })
+}
 
 
 assert(

@@ -1,0 +1,37 @@
+.dado1{
+
+	background-image: url("./img/dado_1_360.png");	
+	width: 100px;
+	height: 100px;
+
+}
+.dado2{
+
+	background-image: url("./img/dado_2_360.png");	
+	width: 100px;
+	height: 100px;
+}
+.dado3{
+
+	background-image: url("./img/dado_3_360.png");	
+	width: 100px;
+	height: 100px;
+}
+.dado4{
+
+	background-image: url("./img/dado_4_360.png");	
+	width: 100px;
+	height: 100px;
+}
+.dado5{
+
+	background-image: url("./img/dado_5_360.png");	
+	width: 100px;
+	height: 100px;
+}
+.dado6{
+
+	background-image: url("./img/dado_6_360.png");	
+	width: 100px;
+	height: 100px;
+}
