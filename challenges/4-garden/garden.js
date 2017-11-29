@@ -3,7 +3,25 @@
 //------------------------------------------------------------------------------------------------------------------
 // TU CODIGO: Crea un Objeto literal "garden", y funcion constuctora y prototipos para Flower aca.
 //------------------------------------------------------------------------------------------------------------------
+garden={}
 
+var Flower = function(name,color){
+  this.name = name
+  this.color= color
+
+}
+
+garden.plant = function (flowers){
+  this.flowers = flowers
+}
+
+garden.name ="Kula Botanical Garden"
+garden.location = "Makawao"
+garden.selectByColor = function(color){
+    this.flowers.filter(function(element){
+    return (color === element.color)
+  })  
+}
 
 //------------------------------------------------------------------------------------------------------------------
 // PRUEBAS: **NO** Cambies nada debajo de esta linea. Tu trabajo es implementar el codigo arriba para hacer que estas pruebas pasen.
@@ -15,6 +33,10 @@ function assert(test, message) {
   }
   return true;
 }
+
+
+
+
 
 var flowers = [
   new Flower("Aster", "red"),
